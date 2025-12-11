@@ -97,7 +97,9 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public T set(int index, T element) {
-        return null;
+        T old = get(index);
+        array[index] = element;
+        return old;
     }
 
     @Override
