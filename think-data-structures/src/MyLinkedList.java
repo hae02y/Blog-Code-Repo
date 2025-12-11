@@ -12,7 +12,7 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -89,7 +89,10 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        if(index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        return array[index];
     }
 
     @Override
