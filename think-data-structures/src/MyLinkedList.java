@@ -74,7 +74,11 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        boolean flag = false;
+        for(Object o : c){
+           flag = flag | remove(o);
+        }
+        return flag;
     }
 
     @Override
